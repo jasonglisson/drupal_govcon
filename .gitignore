@@ -22,7 +22,7 @@ sites/*/settings*.php
 sites/*/services*.yml
 
 # Ignore paths that contain user-generated content.
-sites/*/files
+# sites/*/files
 sites/*/private
 
 # Ignore SimpleTest multi-site environment.
@@ -40,3 +40,6 @@ sites/simpletest
 
 # Ignore SimpleTest multi-site environment.
 # simpletest
+
+# Ignore file type
+.DS_Store
