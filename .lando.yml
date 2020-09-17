@@ -1,0 +1,4 @@
+name: drupalgovcon-demo
+recipe: drupal8
+config:
+  webroot: .

@@ -1,0 +1,21 @@
+uuid: 70e2405f-bad8-4e91-806b-66f55bd53aac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_program_description
+    - paragraphs.paragraphs_type.paragraph_demo
+  module:
+    - text
+id: paragraph.paragraph_demo.field_program_description
+field_name: field_program_description
+entity_type: paragraph
+bundle: paragraph_demo
+label: 'Program Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

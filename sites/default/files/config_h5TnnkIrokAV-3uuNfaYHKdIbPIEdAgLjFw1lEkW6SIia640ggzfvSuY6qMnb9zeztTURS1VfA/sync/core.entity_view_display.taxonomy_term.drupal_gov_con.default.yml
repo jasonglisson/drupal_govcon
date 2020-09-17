@@ -1,0 +1,32 @@
+uuid: 1e3be420-357c-483e-b1d2-814692c177fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.drupal_gov_con.field_category_image
+    - taxonomy.vocabulary.drupal_gov_con
+  module:
+    - image
+    - text
+id: taxonomy_term.drupal_gov_con.default
+targetEntityType: taxonomy_term
+bundle: drupal_gov_con
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_category_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

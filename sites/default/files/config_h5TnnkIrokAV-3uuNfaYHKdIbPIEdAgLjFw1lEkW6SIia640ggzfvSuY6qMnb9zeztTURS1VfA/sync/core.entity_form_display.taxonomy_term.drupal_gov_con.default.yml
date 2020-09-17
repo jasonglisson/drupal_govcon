@@ -1,0 +1,55 @@
+uuid: 22c2f31c-6e91-4208-b2a3-04ece7477db4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.drupal_gov_con.field_category_image
+    - image.style.thumbnail
+    - taxonomy.vocabulary.drupal_gov_con
+  module:
+    - image
+    - path
+    - text
+id: taxonomy_term.drupal_gov_con.default
+targetEntityType: taxonomy_term
+bundle: drupal_gov_con
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_category_image:
+    weight: 101
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
+hidden: {  }

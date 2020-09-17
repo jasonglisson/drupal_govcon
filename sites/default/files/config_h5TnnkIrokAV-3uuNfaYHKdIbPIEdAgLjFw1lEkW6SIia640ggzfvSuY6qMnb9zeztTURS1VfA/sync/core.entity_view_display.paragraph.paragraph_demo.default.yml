@@ -1,0 +1,40 @@
+uuid: e2905211-7188-4c8b-a21b-13c317a187bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_demo.field_name
+    - field.field.paragraph.paragraph_demo.field_program_description
+    - field.field.paragraph.paragraph_demo.field_term_demo
+    - paragraphs.paragraphs_type.paragraph_demo
+  module:
+    - text
+id: paragraph.paragraph_demo.default
+targetEntityType: paragraph
+bundle: paragraph_demo
+mode: default
+content:
+  field_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_program_description:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_term_demo:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

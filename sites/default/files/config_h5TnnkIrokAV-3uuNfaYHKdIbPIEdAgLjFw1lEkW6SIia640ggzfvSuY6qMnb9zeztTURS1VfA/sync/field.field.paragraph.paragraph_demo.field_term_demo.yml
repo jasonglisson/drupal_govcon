@@ -1,0 +1,29 @@
+uuid: 630999e5-97d2-4e50-93f2-1d795b8c4560
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_term_demo
+    - paragraphs.paragraphs_type.paragraph_demo
+    - taxonomy.vocabulary.drupal_gov_con
+id: paragraph.paragraph_demo.field_term_demo
+field_name: field_term_demo
+entity_type: paragraph
+bundle: paragraph_demo
+label: 'Term Demo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      drupal_gov_con: drupal_gov_con
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

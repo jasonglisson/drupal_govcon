@@ -1,0 +1,6 @@
+name: Post Update Demo
+type: module
+description: 'This module is for demoing the capabilities of post update scripts.'
+package: Demo
+version: 0.1
+core: 8.x
