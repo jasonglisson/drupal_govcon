@@ -18,9 +18,12 @@ function post_update_demo_post_update_demo() {
 
 function vocabulary_create() {
 
+  // Comment for logging what is going on
   \Drupal::logger('post_update_demo')->notice('Vocabulary is being created...');
 
+  // This is the machine name of the vocabulary
   $vid = 'drupal_gov_con';
+  // The name that you want to give to the vocabulary
   $name = 'Drupal Gov Con';
   $vocabularies = \Drupal\taxonomy\Entity\Vocabulary::loadMultiple();
   
@@ -46,6 +49,7 @@ function vocabulary_create() {
 
 function taxonomy_create() {
 
+  // Comment for logging what is going on
   \Drupal::logger('post_update_demo')->notice('Adding taxonomy to vocabulary...');
 
   // function that will process data from the given array
@@ -92,8 +96,10 @@ function taxonomy_create() {
   }
 }
 
+// Creating all of the paragraphs for the page
 function page_paragraph_create() {
 
+  // function that looks up TID by the machine name of the taxonomy term
   function load_tid_by_name($term_name, $vocab) {
     $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
     ->loadByProperties(['name' => $term_name, 'vid' => $vocab]);
@@ -120,11 +126,12 @@ function page_paragraph_create() {
     
   }
 
+  // Comment for logging what is going on
   \Drupal::logger('custom_module')->notice('Custom Module Page Creation and Paragraphs being created...');
 
   // Create the page
   $node = Node::create(['type' => 'page']);
-
+  // Add page name
   $title = 'DrupalGovCon Demo Page';
   $node->set('title', $title); 
 

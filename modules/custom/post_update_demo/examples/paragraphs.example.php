@@ -3,6 +3,7 @@ function post_update_demo_post_add_paragraphs() {
 
   use Drupal\paragraphs\Entity\Paragraph;
 
+  // Function for looking up the term ID by name
   function load_tid_by_name($term_name, $vocab) {
     $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
     ->loadByProperties(['name' => $term_name, 'vid' => $vocab]);
@@ -25,14 +26,18 @@ function post_update_demo_post_add_paragraphs() {
     ]);
     $paragraph->save();
 
+    // Add paragraphs to node
     $node->field_paragraphs->appendItem($paragraph);
     
   }
-
+  // Comment for logging what is going on
   \Drupal::logger('custom_module')->notice('Custom Page and Paragraphs being created...');
 
   // Create the page
   $node = Node::create(['type' => 'page']);
+
+  $title = 'DrupalGovCon Demo Page';
+  $node->set('title', $title); 
 
   // set data array
   $data = [

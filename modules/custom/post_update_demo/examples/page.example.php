@@ -4,6 +4,7 @@ use Drupal\node\Entity\Node;
 
 function post_update_demo_post_update_page() {
 
+  // Comment for logging what is going on
   \Drupal::logger('post_update_demo')->notice('Page is being created...');
 
   // Creating landing page

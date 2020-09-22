@@ -5,9 +5,12 @@ use Drupal\field\Entity\FieldConfig;
 
 function post_update_demo_post_update_vocabulary() {
 
+  // Comment for logging what is going on
   \Drupal::logger('post_update_demo')->notice('Vocabulary is being created...');
 
+  // This is the machine name of the vocabulary
   $vid = 'drupal_gov_con';
+  // The name that you want to give to the vocabulary
   $name = 'Drupal Gov Con';
   $vocabularies = \Drupal\taxonomy\Entity\Vocabulary::loadMultiple();
   
@@ -18,6 +21,7 @@ function post_update_demo_post_update_vocabulary() {
           'name' => $name,
     ));
     
+    // Image field array
     $fields['category_image'] = [
       'type' => 'image',
       'entity_type' => 'user',
@@ -54,6 +58,7 @@ function post_update_demo_post_update_vocabulary() {
       ],
     ];
 
+    // Loop though each field and add content
     foreach ($fields as $field_name => $config) {
       $field_storage = FieldStorageConfig::loadByName($config['entity_type'], $field_name);
       if (empty($field_storage)) {
@@ -65,7 +70,7 @@ function post_update_demo_post_update_vocabulary() {
       }
     }
 
-
+    // Save vocabulary when loop is done
     $vocabulary->save();
 
   } else {
