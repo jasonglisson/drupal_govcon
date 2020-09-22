@@ -5,6 +5,9 @@ use Drupal\node\Entity\Node;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\taxonomy\Entity\Term;
 
+/**
+ * Create content with post_update script for DrupalGovCon demo
+ */
 function post_update_demo_post_update_demo() {
 
   vocabulary_create();
