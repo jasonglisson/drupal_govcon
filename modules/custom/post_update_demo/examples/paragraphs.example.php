@@ -1,7 +1,8 @@
 <?php
-function post_update_demo_post_update_add_paragraphs() {
 
-  use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\paragraphs\Entity\Paragraph;
+
+function post_update_demo_post_update_add_paragraphs() {
 
   // Function for looking up the term ID by name
   function load_tid_by_name($term_name, $vocab) {
