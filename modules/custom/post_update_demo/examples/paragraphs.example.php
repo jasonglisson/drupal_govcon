@@ -1,5 +1,5 @@
 <?php
-function post_update_demo_post_add_paragraphs() {
+function post_update_demo_post_update_add_paragraphs() {
 
   use Drupal\paragraphs\Entity\Paragraph;
 
